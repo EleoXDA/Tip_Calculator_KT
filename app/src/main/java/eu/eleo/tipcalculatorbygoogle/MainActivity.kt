@@ -17,24 +17,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateTip() {
-        val stringInTextField = binding.costOfService.text.toString()
+        val stringInTextField = binding.costOfServiceEditText.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResult.text = ""
             return
         }
+
         val tipPercentage = when (binding.tipOptions.checkedRadioButtonId) {
-            R.id.option_fifteen -> 0.15
+            R.id.option_twenty -> 0.20
             R.id.option_eighteen -> 0.18
-            else -> 0.20
+            else -> 0.15
         }
+
         var tip = tipPercentage * cost
         if (binding.roundUpSwitch.isChecked) {
-            kotlin.math.ceil(tip)
+            tip = kotlin.math.ceil(tip)
         }
-        fun displayTip(tip: Double) {
-            val formattedTip = NumberFormat.getCurrencyInstance().format(0.0)
-            binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
-        }
+
+        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
 }
