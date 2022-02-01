@@ -7,7 +7,7 @@ import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,24 +16,25 @@ class MainActivity : AppCompatActivity() {
         binding.calculateButton.setOnClickListener { calculateTip() }
     }
 
-    fun calculateTip() {
+    private fun calculateTip() {
         val stringInTextField = binding.costOfService.text.toString()
         val cost = stringInTextField.toDoubleOrNull()
         if (cost == null) {
             binding.tipResult.text = ""
             return
         }
-        val selectedID = binding.tipOptions.checkedRadioButtonId
-        val tipPercentage = when (selectedID) {
+        val tipPercentage = when (binding.tipOptions.checkedRadioButtonId) {
             R.id.option_fifteen -> 0.15
             R.id.option_eighteen -> 0.18
             else -> 0.20
         }
         var tip = tipPercentage * cost
         if (binding.roundUpSwitch.isChecked) {
-            tip=kotlin.math.ceil(tip)
+            kotlin.math.ceil(tip)
         }
-        val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+        fun displayTip(tip: Double) {
+            val formattedTip = NumberFormat.getCurrencyInstance().format(0.0)
+            binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
+        }
     }
 }
