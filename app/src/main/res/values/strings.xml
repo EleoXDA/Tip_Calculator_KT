@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tip Calc. by Google Kotlin Training</string>
+    <string name="app_name">Tip Calc</string>
     <string name="cost_of_service">Cost of Service</string>
     <string name="round_up_tip">Round up tip?</string>
     <string name="calculate">Calculate</string>
