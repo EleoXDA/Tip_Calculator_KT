@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.TipCalc.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+    <item name="android:paddingStart">8dp</item>
+    <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+</resources>
