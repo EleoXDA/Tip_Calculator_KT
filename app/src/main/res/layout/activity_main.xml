@@ -14,8 +14,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/cost_of_service"
         app:layout_constraintStart_toEndOf="@id/icon_cost_of_service"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="16dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/cost_of_service_edit_text"
@@ -29,8 +28,8 @@
         android:id="@+id/service_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         style="@style/Widget.TipCalc.TextView"
-        android:layout_marginTop="16dp"
         android:text="@string/how_was_the_service"
         app:layout_constraintStart_toStartOf="@id/cost_of_service"
         app:layout_constraintTop_toBottomOf="@id/cost_of_service" />
@@ -53,7 +52,8 @@
         app:layout_constraintTop_toBottomOf="@id/tip_options"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/round_up_switch"
-        app:layout_constraintBottom_toBottomOf="@id/round_up_switch"/>
+        app:layout_constraintBottom_toBottomOf="@id/round_up_switch"
+        tools:ignore="ContentDescription" />
 
     <RadioGroup
         android:id="@+id/tip_options"
@@ -61,7 +61,6 @@
         android:layout_height="wrap_content"
         android:checkedButton="@id/option_twenty"
         android:orientation="vertical"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@id/service_question"
         app:layout_constraintTop_toBottomOf="@id/service_question">
 
@@ -113,8 +112,7 @@
         android:text="@string/tip_amount"
         style="@style/Widget.TipCalc.TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        tools:text="Tip Amount: $0"/>
+        app:layout_constraintTop_toBottomOf="@id/calculate_button" />
 
     <ImageView
         android:id="@+id/icon_cost_of_service"
@@ -125,8 +123,4 @@
         app:layout_constraintBottom_toBottomOf="@id/cost_of_service"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_store"/>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

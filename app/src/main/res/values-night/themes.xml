@@ -7,8 +7,5 @@
         <item name="colorSecondaryVariant">@color/blue_light</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
-        <item name="radioButtonStyle">@style/Widget.TipCalc.CompoundButton.RadioButton</item>
-        <item name="switchStyle">@style/Widget.TipCalc.CompoundButton.Switch</item>
     </style>
 </resources>

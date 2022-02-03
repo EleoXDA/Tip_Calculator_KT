@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.TipCalc" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.TipCalculatorKotlinTraining" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/green</item>
         <item name="colorPrimaryVariant">@color/green_dark</item>
         <item name="colorOnPrimary">@color/white</item>
