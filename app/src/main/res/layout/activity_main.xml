@@ -6,14 +6,17 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".MainActivity">
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cost_of_service"
+        android:layout_marginStart="16dp"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:hint="@string/cost_of_service"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/cost_of_service_edit_text"
@@ -87,6 +90,16 @@
         android:text="@string/tip_amount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button" />
+
+    <ImageView
+        android:id="@+id/icon_cost_of_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintTop_toTopOf="@id/cost_of_service"
+        app:layout_constraintBottom_toBottomOf="@id/cost_of_service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_store"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
