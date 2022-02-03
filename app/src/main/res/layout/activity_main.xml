@@ -87,12 +87,12 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/round_up_switch"
-        android:layout_width="339dp"
-        android:layout_height="60dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:checked="true"
         android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="tip_options"
+        app:layout_constraintStart_toStartOf="@id/tip_options"
         app:layout_constraintTop_toBottomOf="@id/tip_options" />
 
     <Button
@@ -100,6 +100,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/calculate"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tip_options"
         app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
