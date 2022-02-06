@@ -20,10 +20,14 @@ class CalculatorTests {
     @Test
     fun calculate_default_tip() {
         onView(withId(R.id.cost_of_service_edit_text))
-            .perform(typeText("50.00"))
+            .perform(typeText("49.00"))
+        onView(withId(R.id.option_fifteen))
+            .perform(click())
+        onView(withId(R.id.round_up_switch))
+            .perform(click())
         onView(withId(R.id.calculate_button))
             .perform(click())
         onView(withId(R.id.tip_result))
-            .check(matches(withText(containsString("$10.00"))))
+            .check(matches(withText(containsString("$7.35"))))
     }
 }
